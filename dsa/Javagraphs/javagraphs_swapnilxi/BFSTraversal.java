@@ -21,19 +21,19 @@ public class BFSTraversal {
     {  
         adj[s].add(d);      /* adding an edge to the adjacency list (edges are bidirectional in this example) */  
     }  
-    void BFS(int n)  
+    void BFS(int curr)  
     {  
         boolean visited[] = new boolean[v];       /* initialize boolean array for holding the data */  
         int neighbour = 0;  
-        visited[n]=true;                    
-        queue.add(n);       /* root v is added to the top of the queueue */  
+        visited[curr]=true;                    
+        queue.add(curr);       /* root v is added to the top of the queueue */  
         while (!queue.isEmpty())  
         {  
-            n = queue.poll();        /* remove the top element of the queueue */   
-            System.out.print(n+" ");    /* print the top element of the queueue */  
-            for (int i = 0; i < adj[n].size(); i++)  /* iterate through the linked list and push all neighbors into queueue */  
+            curr = queue.poll();        /* remove the top element of the queueue */   
+            System.out.print(curr+" ");    /* print the top element of the queueue */  
+            for (int i = 0; i < adj[curr].size(); i++)  /* iterate through the linked list and push all neighbors into queueue */  
             {  
-                neighbour = adj[n].get(i);  
+                neighbour = adj[curr].get(i);  
                 if (!visited[neighbour])      /* only insert visited into queueue if they have not been explored already */  
                 {  
                     visited[neighbour] = true;  
@@ -44,6 +44,7 @@ public class BFSTraversal {
     }  
     public static void main(String args[])  
     {  
+        
         BFSTraversal graph = new BFSTraversal(6);  
         graph.addEdge(0, 1);  
         graph.addEdge(0, 3);  

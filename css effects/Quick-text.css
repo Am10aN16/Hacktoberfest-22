@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&displayer=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#quick-text{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 1050px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .quick-card {
+    position: relative;
+    width: 320px;
+    padding: 40px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.container .quick-card:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: calc(-100% + 4px);
+    width: 100%;
+    height: 100%;
+    background: #000;
+    z-index: 1;
+    transition: 0.5s ease-in-out;
+}
+
+.container .quick-card:hover:before {
+    bottom: 0px;
+}
+
+.container .quick-card:nth-child(1):before {
+    background: #ff56ac;
+}
+
+.container .quick-card:nth-child(2):before {
+    background: #1bcaff;
+}
+
+.container .quick-card:nth-child(3):before {
+    background: #e33c;
+}
+
+.container .quick-card div {
+    position: relative;
+    z-index: 2;
+}
+
+.container .quick-card div h2 {
+    margin-bottom: 10px;
+    font-size: 30px;
+    transition: 0.5s;
+    color: #777;
+}
+
+.container .quick-card div p {
+    font-size: 18px;
+    transition: 0.5s;
+    color: #777;
+}
+
+.container .quick-card div a {
+    margin-top: 20px;
+    font-size: 14px;
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.5s;
+    background: #fff;
+    color: #777;
+    padding: 6px 10px;
+    font-weight: 600;
+    box-shadow:  0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+.container .quick-card:hover div h2,
+.container .quick-card:hover div p {
+    color: #fff;
+} 

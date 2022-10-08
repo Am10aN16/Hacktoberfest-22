@@ -27,5 +27,14 @@ Read more here: [BFS JavaTpoint](https://www.javatpoint.com/breadth-first-search
 
 ### Explanation to code :
 
+create a queue Q 
+mark v as visited and put v into Q 
+while Q is non-empty 
+    remove the head u of Q 
+    mark and enqueue all (unvisited) neighbours of u
+
+Dry run : ![image](https://user-images.githubusercontent.com/54740310/194698805-7974a0c7-2d2f-410d-a25e-8b605d435de1.png)
+
+
 
 

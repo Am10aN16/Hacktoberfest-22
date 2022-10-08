@@ -5,9 +5,9 @@ public class AdjList
 {
 			
 			  // Adding edge
-static void addEdge(ArrayList<ArrayList<Integer>> adList, int s, int d) {
-				adList.get(s).add(d);
-				adList.get(d).add(s);
+static void addEdge(ArrayList<ArrayList<Integer>> adjList, int s, int d) {
+				adjList.get(s).add(d);
+				adjList.get(d).add(s);
 			  }
 			
 public static void main(String[] args) {			
